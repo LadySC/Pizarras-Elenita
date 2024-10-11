@@ -7,7 +7,11 @@ package com.project.pizarras_Elenita.entities;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import java.util.Set;
 import lombok.*;
 
 @Setter
@@ -25,5 +29,13 @@ public class RolEntity {
 
     @Column(name = "rol_nombre", length = 30, unique = true)
     private String rolNombre;
+    
+    @ManyToMany
+    @JoinTable(
+     name="rol_autoridad",
+     joinColumns= @JoinColumn(name="rol_id"),
+     inverseJoinColumns= @JoinColumn(name="autoridad_id")
+     )
+    private Set <AutoridadEntity> autoridades;
 
 }
