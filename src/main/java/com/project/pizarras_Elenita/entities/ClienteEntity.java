@@ -56,4 +56,12 @@ public class ClienteEntity {
      )
     private Set <TipoClienteEntity> tipoListaCliente;
     
+    @ManyToMany
+    @JoinTable(
+     name="usuario_rol",
+     joinColumns= @JoinColumn(name="usuario_id"),
+     inverseJoinColumns= @JoinColumn(name="rol_id")
+     )
+    private Set <RolEntity> listaRoles;
+    
 }
