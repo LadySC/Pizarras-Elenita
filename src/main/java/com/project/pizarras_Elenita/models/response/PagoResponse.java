@@ -4,10 +4,22 @@
  */
 package com.project.pizarras_Elenita.models.response;
 
-/**
- *
- * @author salar
- */
+import java.math.BigDecimal;
+import java.util.Date;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class PagoResponse {
-    
+    private String pagoId;
+    private Date fechaPago;
+    private BigDecimal monto;
+    private String metodoPago;
 }

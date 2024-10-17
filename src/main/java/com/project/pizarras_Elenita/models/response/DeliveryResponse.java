@@ -4,10 +4,20 @@
  */
 package com.project.pizarras_Elenita.models.response;
 
-/**
- *
- * @author salar
- */
+import java.util.Date;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class DeliveryResponse {
-    
+    private String deliveryId;
+    private Date fechaDelivery;
+    private String direccionDelivery;
 }
