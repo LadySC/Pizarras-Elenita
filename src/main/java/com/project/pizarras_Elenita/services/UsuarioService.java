@@ -10,11 +10,11 @@ import java.util.List;
 
 public interface UsuarioService {
 
-    List<RegistroUsuarioRequest> getAllPedidos();
+    List<UsuarioResponse> getAllUsuarios();
 
-    void createPedido(RegistroUsuarioRequest request);
+    void createUsuario(RegistroUsuarioRequest request);
 
-    UsuarioResponse getPedidoById(String id);
+    UsuarioResponse getUsuarioById(String id);
 
     void deleteById(String id);
 
