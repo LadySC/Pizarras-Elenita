@@ -4,6 +4,7 @@
  */
 package com.project.pizarras_Elenita.models.response;
 
+<<<<<<< HEAD
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -32,4 +33,12 @@ public class OrdenResponse {
     private String status;
 
     private List<DetallePedidoResponse> productList;
+=======
+/**
+ *
+ * @author FAMILIA
+ */
+public class OrdenResponse {
+    
+>>>>>>> e1aae83d2c733d21e1e8e81391a3b46df3416d7c
 }
