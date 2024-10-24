@@ -4,6 +4,8 @@
  */
 package com.project.pizarras_Elenita.models.requests;
 
+import java.math.BigDecimal;
+import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -15,12 +17,10 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class RegistroUsuarioRequest {
-    private String username;
-    private String customerType;
-    private String email;
-    private String numberPhone;
-    private String address;
-    private String password;
-}
+public class PagoRequest {
 
+    private String pedidoId;
+    private Date fechaPago;
+    private BigDecimal monto;
+    private String metodoPago;
+}

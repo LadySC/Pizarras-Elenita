@@ -4,6 +4,7 @@
  */
 package com.project.pizarras_Elenita.models.requests;
 
+import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -15,12 +16,8 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class RegistroUsuarioRequest {
-    private String username;
-    private String customerType;
-    private String email;
-    private String numberPhone;
-    private String address;
-    private String password;
+public class DeliveryRequest {
+    private String pedidoId;
+    private Date fechaDelivery;
+    private String direccionDelivery;
 }
-

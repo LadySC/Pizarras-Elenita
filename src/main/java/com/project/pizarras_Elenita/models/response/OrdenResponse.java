@@ -4,10 +4,32 @@
  */
 package com.project.pizarras_Elenita.models.response;
 
-/**
- *
- * @author FAMILIA
- */
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import com.project.pizarras_Elenita.models.response.DetallePedidoResponse;
+
+
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class OrdenResponse {
-    
+
+    private String orderId;
+    private String userId;
+    private String measurement;
+    private String material;
+    private BigDecimal Price;
+    private String deliveryMethod;
+    private LocalDateTime orderDate;
+    private String status;
+
+    private List<DetallePedidoResponse> productList;
 }
