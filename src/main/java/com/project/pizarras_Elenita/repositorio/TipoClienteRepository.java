@@ -5,10 +5,11 @@
 package com.project.pizarras_Elenita.repositorio;
 
 import com.project.pizarras_Elenita.entities.TipoClienteEntity;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TipoClienteRepository extends JpaRepository<TipoClienteEntity,String>{
-    
+    List<TipoClienteEntity> findByTipoClienteIn(List<String> tipoCliente);
 }
