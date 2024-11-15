@@ -14,7 +14,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @Builder
@@ -36,11 +35,11 @@ public class OrdenRequest {
     private BigDecimal totalPrice;
     private List<ArticuloCompradoRequest> items;
 
+    /*Obtiene un lista por cada articulo obtendra solo en precio de los articulos*/
     public BigDecimal calculateTotalPrice() {
         this.totalPrice = this.items.stream()
                 .map(ArticuloCompradoRequest::getPrice)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
         return this.totalPrice;
     }
-;
 }
